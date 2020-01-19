@@ -17,7 +17,6 @@ class SumOfTwo():
     i = 0
     while (i < len(data)-1):
       if data[i] + data[i+1] == targetSum:
-        # print('\t fit!', data[i], '+', data[i+1], '\t[', i, ',', i+1, ']')
         coupleOfIndex = (i, i+1)
         targetListOfIndexes.append(coupleOfIndex)
       i += 2  
@@ -28,8 +27,7 @@ class SumOfTwo():
 
 if __name__ == '__main__': 
   cortegePi = (3,1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,2,3,8,4,7,6,7,4,4,5,9,2,9,9,8,0,6,7,9,8,2,2,6,5,3,5,4,1,5,3,5,8,9,0,6,5,3,5,3,2,3,8,4,7)
-  randList = [3,1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,2,3,8,4,7,6,7,4,4,5,9,2,9,9,8,0,6,7,9,8,2,2,6,5,3,5,4,1,5,3,5,8,9,0,6,5,3,5,3,2,3,8,4,7]
-
+  
   """ Test #1 """
   targetSum = 5
   res1 = SumOfTwo.find_sum(cortegePi, targetSum)
@@ -39,25 +37,24 @@ if __name__ == '__main__':
 
   """ Test #2 """
   targetSum = 9
-  res1 = SumOfTwo.find_sum(randList, targetSum)
+  res2 = SumOfTwo.find_sum(cortegePi, targetSum)
   print('\ntargetSum=',targetSum)
-  print('res1',res1)
-  assert res1 == [(24, 25), (48, 49)], 'test #2 passed'
+  print('res2',res2)
+  assert res2 == [(24, 25), (48, 49)], 'test #2 passed'
 
   """ Test #3 """
   targetSum = 27
-  res1 = SumOfTwo.find_sum(cortegePi, targetSum)
+  res3 = SumOfTwo.find_sum(cortegePi, targetSum)
   print('\ntargetSum=',targetSum)
-  print('res1',res1)
-  assert res1 == 'coupleOfIndex is not found', 'test #3 passed'
+  print('res3',res3)
+  assert res3 == 'coupleOfIndex is not found', 'test #3 passed'
 
   """ Test #4 """
-  targetSum = 5
-  res1 = SumOfTwo.find_sum(cortegePi, targetSum)
+  targetSum = 7
+  res4 = SumOfTwo.find_sum(cortegePi, targetSum)
   print('\ntargetSum=',targetSum)
-  print('res1',res1)
-  assert res1 == [(2, 3), (42, 43), (54, 55)], 'test #4 failed'
-
+  print('res4',res4)
+  assert res4 == [(2, 3), (42, 43), (54, 55)], 'test #4 failed'
 
 
 
