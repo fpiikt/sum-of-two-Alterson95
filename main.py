@@ -45,33 +45,20 @@ if __name__ == '__main__':
   assert res1 == [(24, 25), (48, 49)], 'test #2 passed'
 
   """ Test #3 """
-  target = 8
-  res2 = find_sum(Numbers, target)
-  print('\ntargetSum=',target)
-  print('res2',res2)
-  assert res2 == [(6, 7), (8, 9), (30, 31), (40, 41), (44, 45), (52, 53)], 'test #2 passed'
- 
- 
- """ Test #4 """
   targetSum = 27
   res1 = SumOfTwo.find_sum(cortegePi, targetSum)
   print('\ntargetSum=',targetSum)
   print('res1',res1)
   assert res1 == 'coupleOfIndex is not found', 'test #3 passed'
 
-  """ Test #5 """
+  """ Test #4 """
   targetSum = 5
   res1 = SumOfTwo.find_sum(cortegePi, targetSum)
   print('\ntargetSum=',targetSum)
   print('res1',res1)
   assert res1 == [(2, 3), (42, 43), (54, 55)], 'test #4 failed'
 
-  """ Test #6 """
-  target = 8
-  res5 = find_sum(Numbers, target)
-  print('\ntargetSum=',target)
-  print('res5',res5)
-  assert res5 == [(6, 7), (8, 9), (40, 41), (44, 45), (52, 53)], 'test #5 failed'
+
 
 
 
